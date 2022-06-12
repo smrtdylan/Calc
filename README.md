@@ -4,9 +4,9 @@ str(option.lower())
 if option == 'yes':
     firstnum = input("What's your first number? ")
 
-    secondnum = input("What's your second number? ")
+    secondnum = input("What's your second number/exponent number? ")
 
-    equation = input('Which one-step equation would you like to do? Type MULTI, DIV, ADD, SUB ')
+    equation = input('Which one-step equation would you like to do? Type MULTI, DIV, ADD, SUB, or EXP ')
     equation.upper()
 
     if str(equation.upper()) == 'MULTI':
@@ -18,8 +18,11 @@ if option == 'yes':
     elif str(equation.upper()) == 'ADD':
         response = float(firstnum) + float(secondnum)
         print(str(response))
-    else:
+    elif str(equation.upper()) == 'SUB':
         response = float(firstnum) - float(secondnum)
+        print(str(response))
+    else:
+        response = float(firstnum) ** float(secondnum)
         print(str(response))
 
 
